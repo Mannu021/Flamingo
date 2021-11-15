@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:#111;
+    background:linear-gradient(to right , rgba(67, 54, 189, 0.877),rgba(255, 0, 170, 0.575));
     overflow-x: hidden;
 }
 
@@ -62,20 +62,21 @@ header{
 #banner1>img{
     width: 100vw;
     height: auto;
-    margin-bottom:40px;
 
 }
 
 #university{
+    height:102vh;
     display:flex;
     justify-content:space-around;
+    background: linear-gradient(to right top,rgba(39, 39, 24, 0.918),rgba(141, 209, 158, 0.342));
 
 }
 .ubox{
-    margin:10px;
+    margin:150px 0px;
     color:#fff;
-    width:25vw;
-    background: linear-gradient(to bottom,rgb(71, 70, 70),rgb(189, 186, 186));
+    width:30vw;
+    background: linear-gradient(to bottom,rgb(71, 70, 70),rgb(185, 165, 178));
     overflow: hidden;
    }
 .ubox>hr{
@@ -83,14 +84,13 @@ header{
     height: auto;
 }
 .ubox .info .title{
-    margin-top:6px;
+    margin-top:10px;
     text-align: center;
     font-weight: 500;
-    font-size: large;
+    font-size:x-large;
 }
 .info2{
-    display:flex;
-    justify-content: space-between;
+    text-align: center;
     padding:5px;
 }
 .info2>p{
@@ -116,6 +116,8 @@ button {
 	outline: inherit;
 }
 .info2>button{
+
+
     color:white;
     font-weight: 400;
     background:none;
@@ -233,8 +235,8 @@ background:#fff;
 }
 
 #youtube{
-    margin-top:100px;
-    margin-bottom:100px;
+    margin-top:150px;
+    margin-bottom:90px;
     display: flex;
     justify-content: center;
     
@@ -327,6 +329,7 @@ ul{
     display:flex;
     justify-content:space-around;
     flex-direction: column;
+    height: 250vh;
 
 }
 .ubox{
