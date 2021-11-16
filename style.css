@@ -9,8 +9,8 @@
 body{
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background:linear-gradient(to right , rgba(67, 54, 189, 0.877),rgba(255, 0, 170, 0.575));
+    min-height: 100vw;
+    background:linear-gradient(to right , rgba(101, 101, 104, 0.877),rgba(179, 168, 175, 0.575));
     overflow-x: hidden;
 }
 
@@ -66,19 +66,22 @@ header{
 }
 
 #university{
-    height:102vh;
     display:flex;
     justify-content:space-around;
-    background: linear-gradient(to right top,rgba(39, 39, 24, 0.918),rgba(141, 209, 158, 0.342));
-
-}
+   }
 .ubox{
-    margin:150px 0px;
+    margin:100px 0px;
     color:#fff;
-    width:30vw;
-    background: linear-gradient(to bottom,rgb(71, 70, 70),rgb(185, 165, 178));
+    width:28vw;
+    background: rgba(0, 0, 0, 0.151);
+    border-radius:25px;
     overflow: hidden;
    }
+.ubox:hover{
+    width: 29vw;
+    box-shadow: 1px 1px 5px 5px white;
+
+}
 .ubox>hr{
     margin-top:0;
     height: auto;
@@ -102,6 +105,8 @@ header{
 }
 .info2>p:hover{
     text-decoration: underline;
+    font-size:x-large;
+    padding:1px;
 }
 
 
@@ -116,7 +121,6 @@ button {
 	outline: inherit;
 }
 .info2>button{
-
 
     color:white;
     font-weight: 400;
@@ -148,15 +152,17 @@ button:hover{
 
 
 }
-
+{}
 
 .swiper-slide {
 background-position: center;
 background-size: cover;
-margin:20px;
+margin:100px 20px 20px 20px;
 max-width: 350px;
 min-height: 350px;
 background:#fff;
+border-radius: 30px;
+overflow:hidden;
 
 }
 .swiper-container-3d .swiper-slide-shadow-right,
@@ -173,6 +179,7 @@ background:#fff;
     padding:60px 40px;
     text-align: center;
     overflow: hidden;
+    
 }
 
 .testimony .card .layer{
@@ -235,11 +242,17 @@ background:#fff;
 }
 
 #youtube{
-    margin-top:150px;
-    margin-bottom:90px;
-    display: flex;
-    justify-content: center;
-    
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.39);
+    overflow:hidden;
+    margin:100px auto;
+    display: block;
+    width:600px;
+    align-content: center;
+    padding:20px;
+}
+#youtube:hover{
+    background: rgba(252, 251, 250, 0.233);
 }
 hr{
     color:rgb(156, 148, 148);
@@ -325,11 +338,14 @@ ul{
     width: 50%;
     margin-bottom: 30px;
 }
+#youtube{
+    width:90vw;
+    height:60vw;
+}
 #university{
     display:flex;
     justify-content:space-around;
     flex-direction: column;
-    height: 250vh;
 
 }
 .ubox{
@@ -339,9 +355,14 @@ ul{
     overflow: hidden;
     margin-left:10vw;
     margin-right:10vw;
-    margin-top:8px;
     
    }
+.ubox:hover{
+    width:84vw;
+    box-shadow: 1px 1px 5px 5px white;
+    margin-left:8vw;
+    margin-right:8vw;
+}
 }
 @media(max-width: 574px){
   .footer-col{
@@ -352,10 +373,10 @@ ul{
 }
 #university{
     display:flex;
-    justify-content:space-around;
     flex-direction: column;
 
 }
+
 .ubox{
     color:#fff;
     width:80vw;
