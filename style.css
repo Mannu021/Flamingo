@@ -15,7 +15,7 @@ body{
 }
 
 header{
-    width:100vw;
+    width:100%;
     height: auto;
     display:flex;
     justify-content: space-between;
@@ -30,6 +30,10 @@ header{
     width:70px;
     height: 60px;
     margin:8px;
+}
+#text{
+    display: absolute;
+    top: 20px;
 }
 .logo>h2{
     color:white;
@@ -50,21 +54,22 @@ header{
 .nav-link:hover{
     color:thistle;
 }
-
-
-
-
-
-
-
-
-
-#banner1>img{
-    width: 100vw;
-    height: auto;
+.banner{
+    height: 100%;
+    width: 100%;
+}
+#text{
+    margin:10%;
+    padding:5%;
+    position: absolute;
+    width:30%;
+    text-align: left;
 
 }
-
+.banner img{
+    width:100%;
+    height:100%;
+}
 #university{
     display:flex;
     justify-content:space-around;
@@ -111,11 +116,98 @@ header{
 
 
 
+
+#slider {
+    width:500px;
+    top:100px;
+    position:absolute;
+    
+}
+#headera {
+    width:260px;
+    height:65vh;
+    position:absolute;
+    right:0;
+    border:1px solid #d8d8d8;
+    margin-left:40px;
+    padding:20px 40px;
+    border-radius:3px;
+    box-shadow:0 0 8px gray;
+    background: rgba(12, 203, 209, 0.801);
+}
+#sidebar {
+    transform: rotate(90deg);
+    background: rgba(22, 171, 230, 0.863);
+    padding:10px;
+    position:absolute;
+    top:180px;
+    left:84px;
+    box-shadow:0 0 8px gray
+}
+#sidebar p{
+    color:white;
+    font-size: large;
+}
+#sidebar1 {
+    position:absolute;
+    top:180px;
+    left:113px;
+    box-shadow:0 0 8px gray
+}
+
+input[type=text] {
+    margin-top:10px;
+    padding:6px;
+    width:100%;
+    font-size:15px;
+    border-radius:2px;
+    border:3px solid #98d0f1
+}
+
+h3{
+    margin:10px;
+    margin-left: 0px;
+}
+input[type=email]{
+    margin-top:10px;
+    padding:6px;
+    width:100%;
+    font-size:15px;
+    border-radius:2px;
+    border:3px solid #98d0f1
+}
+
+div#title {
+    position:absolute;
+    top:300px;
+    left:650px
+}
+select {
+    padding:6px;
+    width:100%;
+    font-size:15px;
+    border-radius:2px;
+    border:3px solid #98d0f1
+}
+textarea {
+    padding:6px;
+    font-size:15px;
+    border-radius:2px;
+    border:3px solid #98d0f1;
+    margin-top:10px;
+    height:80px;
+    width:100%
+}
+
+
 button {
-	background: none;
+	background: rgba(31, 17, 218, 0.63);
+    border-radius: 5px;
+    margin-top: 5px;
+    border:3px solid #880cec;
 	color: inherit;
 	border: none;
-	padding: 0;
+	padding: 10px;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
@@ -152,7 +244,6 @@ button:hover{
 
 
 }
-{}
 
 .swiper-slide {
 background-position: center;
@@ -363,17 +454,65 @@ ul{
     margin-left:8vw;
     margin-right:8vw;
 }
+
 }
 @media(max-width: 574px){
-  .footer-col{
+body{
+    width:100%;
+}
+#headera {
+    width:260px;
+    height:70vh;
+    position:absolute;
+    right:0;
+    border:1px solid #d8d8d8;
+    margin-left:40px;
+    padding:20px 40px;
+    border-radius:3px;
+    box-shadow:0 0 8px gray;
+    background: rgba(12, 203, 209, 0.801);
+}
+#text h1{
+    font-size: x-large;
+    margin-top: 20px;
+}
+.banner img{
+    width:100%;
+    right:50vw;
+    overflow:hidden;
+    
+}
+#youtube{
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.39);
+    overflow:hidden;
+    margin:5px;
+    display: block;
+    width:95vw;
+    align-content: center;
+    padding:15px;
+}
+#youtube:hover{
+    background: rgba(252, 251, 250, 0.233);
+}
+
+#youtube1{
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.footer-col{
     width: 100%;
 }
 #nav-bar>ul{
     display:block;
+    width:100%;
 }
 #university{
     display:flex;
     flex-direction: column;
+    width:100%;
 
 }
 
@@ -387,31 +526,10 @@ ul{
     margin-top:8px;
     
    }
-
-}
-
-
-
-
-
-.form{
-    background-color: rgba(255, 255, 255, 0.123);
-    
-    width:330px;
-    height: 72px;
-    border-radius: 8px;
-}
-.form1>input{
-    background:rgba(236, 231, 231, 0.123);
-    border-radius: 12px;
-    border:none;
-    margin:6px;
-    padding:4px;
-    
-}
-.form1>label{
-    color:rgb(216, 214, 206);
-    margin-left:8px;
+.swiper-slide {
+    width:100%;
+    background-position: center;
+ }
 }
 
 

@@ -30,9 +30,38 @@
     </header>
     
     
-    <div id="banner1">
-            <img src="images/edu.jpg">
+
+    <div class="banner"> 
+        
+        <img src="images/Banner-2-copy.jpg">
+        <div id="text">
+            <h1 style="color:white">Helping you study abroad.</h1>
+        </div>
+
     </div>
+
+    <!--slide form-->
+    <div id="slider" style="right:-342px;">
+        <div id="sidebar" onclick="open_panel()"><p>Contact Us</p></div>
+            <div id="headera">
+                <h2>Contact Form</h2>
+                <p>Please fill the form.</p>
+                <input name="dname" type="text" placeholder="enter your name" >
+                <input name="demail" type="email" placeholder="enter your email">
+                <h3>Query type</h3>
+                <select>
+                    <option>General Query</option>
+                    <option>Studen Query</option>
+                    <option>Parent Query</option>
+                    <option>Others</option>
+                </select>
+                <textarea>Message</textarea>
+                <button type="submit" onclick=close_panel()>Send Message</button>
+            </div>
+        </div>
+    </div>
+          
+    <!--University tabs-->
     <div id="university">
         <div class="ubox">
            <img src="images/MIT.jpg">
@@ -74,19 +103,13 @@
        </div>
 
    </div>
-
+   <!---video link-->
    <div id="youtube">
-        <iframe 
-        width="560" height="315" 
-        src="https://www.youtube.com/embed/b2s8FEnWag4" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+    <iframe id="youtube1" width="560" height="315" src="https://www.youtube-nocookie.com/embed/7X8II6J-6mU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
 
-
+    <!---Testimonials-->
     <div class="testimony">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -176,19 +199,6 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <form action="" method="get" class="form">
-                        <div class="form1">
-                          <label for="name">Enter your name: </label>
-                          <input type="text" name="name" id="name" required>
-                        </div>
-                        <div class="form1">
-                          <label for="email">Enter your email: </label>
-                          <input type="email" name="email" id="email" required>
-                        </div>
-                        <div class="form1">
-                          <input type="submit" value="Submit">
-                        </div>
-                      </form>
                 </div>
             </div>
         </div>
@@ -198,9 +208,11 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
 
     <!-- Initialize Swiper -->
     <script>
+   
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
       grabCursor: true,
@@ -222,5 +234,38 @@
         onlyInViewport: false,
       }
       });
+
+    function open_panel() {
+        slideIt();
+            var a = document.getElementById("sidebar");
+            a.setAttribute("id", "sidebar1");
+            a.setAttribute("onclick", "close_panel()");
+        }
+        /*Function to slide the sidebar form (open form)*/
+        function slideIt() {
+            var slidingDiv = document.getElementById("slider");
+            var stopPosition = 0;
+            if (parseInt(slidingDiv.style.right) < stopPosition) {
+            slidingDiv.style.right = parseInt(slidingDiv.style.right) + 2 + "px";
+            setTimeout(slideIt, 1);
+        }
+        }
+        /*Function to activate form button to close the slider.*/
+        function close_panel() {
+            slideIn();
+            a = document.getElementById("sidebar1");
+            a.setAttribute("id", "sidebar");
+            a.setAttribute("onclick", "open_panel()");
+        }
+
+        /*Function to slide the sidebar form (slide in form)*/
+        function slideIn() {
+            var slidingDiv = document.getElementById("slider");
+            var stopPosition = -342;
+            if (parseInt(slidingDiv.style.right) > stopPosition) {
+            slidingDiv.style.right = parseInt(slidingDiv.style.right) - 2 + "px";
+            setTimeout(slideIn, 1);
+            }
+        }
     </script>
 </body>
